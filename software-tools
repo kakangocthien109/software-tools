@@ -1,4 +1,6 @@
 #!/bin/sh
+mytitle="Software Tools V2.0"
+echo -e '\033]2;'$mytitle'\007'
 username=$(whoami)
 ver="1.0"
 if [ -n "$(command -v lsb_release)" ]; then
@@ -7,7 +9,8 @@ elif [ -f "/etc/os-release" ]; then
 	distro=$(grep PRETTY_NAME /etc/os-release | sed 's/PRETTY_NAME=//g' | tr -d '="')
 fi
 clear
-figlet Software Tool | lolcat
+figlet -t -f ~/.fonts/cyberlarge.flf "Software Tool" | lolcat
+figlet -t -f ~/.fonts/cybersmall.flf "VNux Team" | lolcat
 echo
 echo
 echo "==================================================="
@@ -24,7 +27,7 @@ case $opt in
 
 "Nhan_Linux")
 clear
-figlet Kernels | lolcat
+figlet -t -f ~/.fonts/cyberlarge.flf "Kernels" | lolcat
 echo
 echo
 echo "==================================================="
@@ -92,7 +95,7 @@ break;;
 
 "Phan_mem_tien_ich")
 clear
-figlet Accessories | lolcat
+figlet -t -f ~/.fonts/cyberlarge.flf "Accessories" | lolcat
 echo
 echo
 echo "==================================================="
@@ -195,7 +198,7 @@ break;;
 
 "Phan_mem_da_phuong_tien")
 clear
-figlet Multimedia | lolcat
+figlet -t -f ~/.fonts/cyberlarge.flf "Multimedia" | lolcat
 echo
 echo
 echo "==================================================="
@@ -265,7 +268,7 @@ break;;
 
 "Phan_mem_sua_anh")
 clear
-figlet Photo Tools | lolcat
+figlet -t -f ~/.fonts/cyberlarge.flf "Photo Tools" | lolcat
 echo
 echo
 echo "==================================================="
@@ -326,7 +329,7 @@ break;;
 
 "Phan_mem_sua_van_ban")
 clear
-figlet Text Editors | lolcat
+figlet -t -f ~/.fonts/cyberlarge.flf "Text Editors" | lolcat
 echo
 echo
 echo "==================================================="
@@ -395,7 +398,7 @@ break;;
 
 "Phan_mem_Internet")
 clear
-figlet Internet | lolcat
+figlet -t -f ~/.fonts/cyberlarge.flf "Internet Tools" | lolcat
 echo
 echo
 echo "==================================================="
