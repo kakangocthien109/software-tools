@@ -1,0 +1,513 @@
+#!/bin/sh
+username=$(whoami)
+ver="1.0"
+if [ -n "$(command -v lsb_release)" ]; then
+	distro=$(lsb_release -s -d)
+elif [ -f "/etc/os-release" ]; then
+	distro=$(grep PRETTY_NAME /etc/os-release | sed 's/PRETTY_NAME=//g' | tr -d '="')
+fi
+clear
+figlet Software Tool | lolcat
+echo
+echo
+echo "==================================================="
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Xin chao ban $username!           "
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "==================================================="
+option=("Phan_mem_da_phuong_tien" "Phan_mem_Internet" "Phan_mem_sua_anh" "Phan_mem_sua_van_ban" "Nhan_Linux" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+"Nhan_Linux")
+clear
+figlet Kernels | lolcat
+echo
+echo
+echo "==================================================="
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat nhan nao?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "==================================================="
+option=("Linux" "Linux-LTS" "Linux-Zen" "Linux-Hardened" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+"Linux-Hardened")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S linux-hardened --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Linux-Zen")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S linux-zen --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Linux-LTS")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S linux-lts --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Linux")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S linux --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Thoat")
+clear
+break;;
+
+esac
+done
+break;;
+
+"Phan_mem_tien_ich")
+clear
+figlet Accessories | lolcat
+echo
+echo
+echo "==================================================="
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "==================================================="
+option=("Bleachbit" "Kvantum" "qps" "KSysGuard" "Visual_Studio_Code" "GitHub_Desktop" "Android_Studio" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+
+"Android_Studio")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S android-studio --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"GitHub_Desktop")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S github-desktop-bin --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"KSysGuard")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S KSysGuard --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"Visual_Studio_Code")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S visual-studio-code-bin --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"qps")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S qps --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Bleachbit")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S bleachbit --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Kvantum")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S kvantum-qt5 --noconfirm
+echo
+echo
+echo "Xong!"
+break;;
+
+"Thoat")
+clear
+break;;
+
+
+esac
+done
+break;;
+
+"Phan_mem_da_phuong_tien")
+clear
+figlet Multimedia | lolcat
+echo
+echo
+echo "==================================================="
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "==================================================="
+option=("Spotify" "VLC" "SimpleScreenRecorder" "Kwave" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+
+"Thoat")
+clear
+break;;
+
+"SimpleScreenRecorder")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S simplescreenrecorder --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"Kwave")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S kwave --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"VLC")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S vlc --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"Spotify")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S spotify --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+esac
+done
+break;;
+
+"Phan_mem_sua_anh")
+clear
+figlet Photo Tools | lolcat
+echo
+echo
+echo "==================================================="
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "==================================================="
+option=("GIMP" "Inkscape" "Krita" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+
+"Thoat")
+clear
+break;;
+
+"Krita")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S krita --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"Inkscape")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S inkscape-git --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"GIMP")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S gimp --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+esac
+done
+break;;
+
+"Phan_mem_sua_van_ban")
+clear
+figlet Text Editors | lolcat
+echo
+echo
+echo "==================================================="
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "==================================================="
+option=("vim" "nano" "leafpad" "gedit" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+
+"Thoat")
+clear
+break;;
+
+"gedit")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S gedit --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"nano")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S nano --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"vim")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S vim --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"leafpad")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S leafpad --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+esac
+done
+break;;
+
+
+"Phan_mem_Internet")
+clear
+figlet Internet | lolcat
+echo
+echo
+echo "==================================================="
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "==================================================="
+option=("Cloudflare_WARP" "AnyDesk" "TeamViewer" "qBittorrent" "Microsoft_Edge_Chromium" "Google_Chrome" "Xtreme_Download_Manager" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+"Google_Chrome")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S google-chrome --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"Thoat")
+clear
+break;;
+
+"Xtreme_Download_Manager")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S xdman --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Cloudflare_WARP")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S cloudflare-warp-bin --noconfirm
+echo
+echo
+echo "Dang bat dich vu Cloudflare WARP... vui long cho..."
+sudo systemctl enable warp-svc
+sudo systemctl start warp-svc
+echo
+echo "Xin vui long chon y"
+echo
+warp-cli register
+echo
+echo "De su dung WARP, hay su dung lenh warp-cli connect."
+echo
+echo "Xong!"
+
+break;;
+
+"AnyDesk")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S anydesk-bin --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"qBittorrent")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S qbittorrent --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"TeamViewer")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S teamviewer --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Microsoft_Edge_Chromium")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S microsoft-edge-dev-bin --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+esac
+done
+break;;
+
+"Thoat")
+clear
+break;;
+esac
+done
