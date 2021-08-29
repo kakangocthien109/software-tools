@@ -10,7 +10,7 @@ elif [ -f "/etc/os-release" ]; then
 fi
 clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Software Tool" | lolcat
-figlet -t -f ~/.fonts/cybersmall.flf "VNux Team" | lolcat
+figlet -t -f ~/.fonts/cybersmall.flf "By VNux Team" | lolcat
 echo
 echo
 echo "==================================================="
