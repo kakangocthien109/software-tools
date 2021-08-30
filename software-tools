@@ -13,13 +13,13 @@ figlet -t -f ~/.fonts/cyberlarge.flf "Software Tool" | lolcat
 figlet -t -f ~/.fonts/cybersmall.flf "By VNux Team" | lolcat
 echo
 echo
-echo "==================================================="
+echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Xin chao ban $username!           "
 echo "|    Ban muon cai dat phan mem gi?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
-echo "==================================================="
+echo "===================================================" | lolcat
 option=("Phan_mem_da_phuong_tien" "Phan_mem_Internet" "Phan_mem_sua_anh" "Phan_mem_sua_van_ban" "Nhan_Linux" "Thoat")
 select opt in ${option[*]};
 do
@@ -30,12 +30,12 @@ clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Kernels" | lolcat
 echo
 echo
-echo "==================================================="
+echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Ban muon cai dat nhan nao?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
-echo "==================================================="
+echo "===================================================" | lolcat
 option=("Linux" "Linux-LTS" "Linux-Zen" "Linux-Hardened" "Thoat")
 select opt in ${option[*]};
 do
@@ -98,17 +98,39 @@ clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Accessories" | lolcat
 echo
 echo
-echo "==================================================="
+echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Ban muon cai dat phan mem gi?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
-echo "==================================================="
-option=("Bleachbit" "Kvantum" "qps" "KSysGuard" "Visual_Studio_Code" "GitHub_Desktop" "Android_Studio" "Thoat")
+echo "===================================================" | lolcat
+option=("Bleachbit" "Kvantum" "qps" "KSysGuard" "Visual_Studio_Code" "GitHub_Desktop" "Android_Studio" "Java" "wine" "Thoat")
 select opt in ${option[*]};
 do
 case $opt in
 
+"wine")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S wine-git --noconfirm 
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"Java")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+yay -S jdk-openjdk 
+echo
+echo
+echo "Xong!"
+
+break;;
 
 "Android_Studio")
 clear
@@ -201,12 +223,12 @@ clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Multimedia" | lolcat
 echo
 echo
-echo "==================================================="
+echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Ban muon cai dat phan mem gi?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
-echo "==================================================="
+echo "===================================================" | lolcat
 option=("Spotify" "VLC" "SimpleScreenRecorder" "Kwave" "Thoat")
 select opt in ${option[*]};
 do
@@ -271,12 +293,12 @@ clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Photo Tools" | lolcat
 echo
 echo
-echo "==================================================="
+echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Ban muon cai dat phan mem gi?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
-echo "==================================================="
+echo "===================================================" | lolcat
 option=("GIMP" "Inkscape" "Krita" "Thoat")
 select opt in ${option[*]};
 do
@@ -332,12 +354,12 @@ clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Text Editors" | lolcat
 echo
 echo
-echo "==================================================="
+echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Ban muon cai dat phan mem gi?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
-echo "==================================================="
+echo "===================================================" | lolcat
 option=("vim" "nano" "leafpad" "gedit" "Thoat")
 select opt in ${option[*]};
 do
@@ -401,12 +423,12 @@ clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Internet Tools" | lolcat
 echo
 echo
-echo "==================================================="
+echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Ban muon cai dat phan mem gi?        "
-echo "|    Xin vui long chon lua chon phia ben duoi   "
-echo "==================================================="
+echo "|    Xin vui long chon lua chon phia ben duoi   " 
+echo "===================================================" | lolcat
 option=("Cloudflare_WARP" "AnyDesk" "TeamViewer" "qBittorrent" "Microsoft_Edge_Chromium" "Google_Chrome" "Xtreme_Download_Manager" "Thoat")
 select opt in ${option[*]};
 do
