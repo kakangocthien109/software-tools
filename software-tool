@@ -1,5 +1,5 @@
 #!/bin/sh
-mytitle="Software Tools V2.0"
+mytitle="Software Tool V2.0"
 echo -e '\033]2;'$mytitle'\007'
 username=$(whoami)
 ver="1.0"
@@ -20,10 +20,90 @@ echo "|    Xin chao ban $username!           "
 echo "|    Ban muon cai dat phan mem gi?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
 echo "===================================================" | lolcat
-option=("Phan_mem_da_phuong_tien" "Phan_mem_Internet" "Phan_mem_sua_anh" "Phan_mem_sua_van_ban" "Nhan_Linux" "Thoat")
+option=("Trinh_quan_ly_goi" "Phan_mem_da_phuong_tien"  "Phan_mem_Internet" "Phan_mem_sua_anh" "Phan_mem_sua_van_ban" "Giao_dien" "Quan_ly_giao_dien" "Nhan_Linux" "Thoat")
 select opt in ${option[*]};
 do
 case $opt in
+
+"Quan_ly_giao_dien")
+clear
+figlet -t -f ~/.fonts/cyberlarge.flf "Desktop Manager" | lolcat
+echo
+echo
+echo "===================================================" | lolcat
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat nhan nao?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "===================================================" | lolcat
+option=("LightDM" "LXDM" "SDDM" "GDM" "XDM" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+"Thoat")
+clear
+break;;
+
+"XDM")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S xorg-xdm xdm-archlinux --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"GDM")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S gdm --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"SDDM")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S sddm  --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"LXDM")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S lxdm-gtk3  --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"LightDM")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S lightdm lightdm-gtk-greeter  --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+esac
+done
+break;;
 
 "Nhan_Linux")
 clear
@@ -526,6 +606,198 @@ echo
 echo "Xong!"
 
 break;;
+
+esac
+done
+break;;
+
+
+"Trinh_quan_ly_goi")
+clear
+figlet -t -f ~/.fonts/cyberlarge.flf "Package Manager" | lolcat
+echo
+echo
+echo "===================================================" | lolcat
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "===================================================" | lolcat
+option=("yay" "pamac" "dpkg_(khong_khuyen_khich)" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+
+"Thoat")
+clear
+break;;
+
+"yay")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+echo "Dang cai dat phan mem phu thuoc..."
+echo
+pacman -S --needed git base-devel
+cd ~/Downloads
+echo
+echo "Dang tai ve file cai dat yay..."
+git clone https://aur.archlinux.org/yay.git
+cd yay
+echo 
+echo "Dang cai dat yay..."
+makepkg -si
+echo
+echo "Dang xoa file thua..."
+rm -r yay
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"pamac")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+echo "Dang cai dat phan mem phu thuoc..."
+echo
+pacman -S --needed git base-devel
+cd ~/Downloads
+echo
+echo "Dang tai ve file cai dat yay..."
+git clone https://aur.archlinux.org/pamac-aur.git
+cd pamac-aur
+echo 
+echo "Dang cai dat yay..."
+makepkg -si
+echo
+echo "Dang xoa file thua..."
+rm -r pamac-aur
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+"dpkg")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S dpkg --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+
+esac
+done
+break;;
+
+"Giao_dien")
+clear
+figlet -t -f ~/.fonts/cyberlarge.flf "Desktop Environment" | lolcat
+echo
+echo
+echo "===================================================" | lolcat
+echo "|    Software Tool - Dang chay tren $distro    "
+echo "|-------------------------------------------------"
+echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Xin vui long chon lua chon phia ben duoi   "
+echo "===================================================" | lolcat
+option=("XFCE" "Budgie" "Mate" "GNOME" "Cinnamon" "LXDE" "LXQT" "Thoat")
+select opt in ${option[*]};
+do
+case $opt in
+
+
+"LXQT")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S lxqt breeze-icons --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"LXDE")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S lxde --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Cinnamon")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S cinnamon gnome-terminal --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"GNOME")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S gnome --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Budgie")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S budgie-desktop gnome --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Mate")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S mate mate-extra --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"XFCE")
+clear
+echo "Vui long cho... Hay nhap mat khau khi duoc nhac nho!"
+echo
+sudo pacman -S xfce4 xfce4-goodies --noconfirm
+echo
+echo
+echo "Xong!"
+
+break;;
+
+"Thoat")
+clear
+break;;
+
+
 
 esac
 done
