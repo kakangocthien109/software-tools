@@ -1,5 +1,5 @@
 #!/bin/sh
-mytitle="Software Tool V2.0"
+mytitle="Software Tool V2.1 - nguyennt.dev - VNux Team"
 echo -e '\033]2;'$mytitle'\007'
 username=$(whoami)
 ver="1.0"
@@ -10,14 +10,14 @@ elif [ -f "/etc/os-release" ]; then
 fi
 clear
 figlet -t -f ~/.fonts/cyberlarge.flf "Software Tool" | lolcat
-figlet -t -f ~/.fonts/cybersmall.flf "By VNux Team" | lolcat
+figlet -t -f ~/.fonts/cybersmall.flf "nguyennt.dev - VNux Team" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
 echo "|    Xin chao ban $username!           "
-echo "|    Ban muon cai dat phan mem gi?        "
+echo "|    Ban muon cai dat loai phan mem nao?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
 echo "===================================================" | lolcat
 option=("Trinh_quan_ly_goi" "Phan_mem_da_phuong_tien"  "Phan_mem_Internet" "Phan_mem_sua_anh" "Phan_mem_sua_van_ban" "Giao_dien" "Quan_ly_giao_dien" "Nhan_Linux" "Thoat")
@@ -33,7 +33,7 @@ echo
 echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
-echo "|    Ban muon cai dat nhan nao?        "
+echo "|    Ban muon cai dat phan mem nao?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
 echo "===================================================" | lolcat
 option=("LightDM" "LXDM" "SDDM" "GDM" "XDM" "Thoat")
@@ -113,7 +113,7 @@ echo
 echo "===================================================" | lolcat
 echo "|    Software Tool - Dang chay tren $distro    "
 echo "|-------------------------------------------------"
-echo "|    Ban muon cai dat nhan nao?        "
+echo "|    Ban muon cai dat loai nhan nao?        "
 echo "|    Xin vui long chon lua chon phia ben duoi   "
 echo "===================================================" | lolcat
 option=("Linux" "Linux-LTS" "Linux-Zen" "Linux-Hardened" "Thoat")
