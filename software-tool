@@ -9,8 +9,8 @@ elif [ -f "/etc/os-release" ]; then
 	distro=$(grep PRETTY_NAME /etc/os-release | sed 's/PRETTY_NAME=//g' | tr -d '="')
 fi
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Software Tool" | lolcat
-figlet -t -f ~/.fonts/cybersmall.flf "nguyennt.dev - VNux Team" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Software Tool" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cybersmall.flf "nguyennt.dev - VNux Team" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -27,7 +27,7 @@ case $opt in
 
 "Quan_ly_giao_dien")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Desktop Manager" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Desktop Manager" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -107,7 +107,7 @@ break;;
 
 "Nhan_Linux")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Kernels" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Kernels" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -175,7 +175,7 @@ break;;
 
 "Phan_mem_tien_ich")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Accessories" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Accessories" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -300,7 +300,7 @@ break;;
 
 "Phan_mem_da_phuong_tien")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Multimedia" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Multimedia" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -370,7 +370,7 @@ break;;
 
 "Phan_mem_sua_anh")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Photo Tools" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Photo Tools" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -431,7 +431,7 @@ break;;
 
 "Phan_mem_sua_van_ban")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Text Editors" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Text Editors" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -500,7 +500,7 @@ break;;
 
 "Phan_mem_Internet")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Internet Tools" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Internet Tools" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -614,7 +614,7 @@ break;;
 
 "Trinh_quan_ly_goi")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Package Manager" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Package Manager" | lolcat
 echo
 echo
 echo "===================================================" | lolcat
@@ -701,7 +701,7 @@ break;;
 
 "Giao_dien")
 clear
-figlet -t -f ~/.fonts/cyberlarge.flf "Desktop Environment" | lolcat
+figlet -t -f  /usr/local/share/fonts/flf/cyberlarge.flf "Desktop Environment" | lolcat
 echo
 echo
 echo "===================================================" | lolcat

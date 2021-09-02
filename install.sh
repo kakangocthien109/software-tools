@@ -2,10 +2,14 @@
 
 # nguyennt.dev
 clear
-mkdir ~/.fonts
+mkdir -p /usr/
+mkdir -p /usr/local/
+mkdir -p /usr/local/share/
+mkdir -p /usr/local/share/fonts/
+mkdir -p /usr/local/share/fonts/flf/
 clear
-cp cybersmall.flf ~/.fonts/
-cp cyberlarge.flf ~/.fonts/
+cp cybersmall.flf /usr/local/share/fonts/flf/
+cp cyberlarge.flf /usr/local/share/fonts/flf/
 clear
 figlet -t  "Software Tool" | lolcat
 figlet -t  "Version 2.0" | lolcat
